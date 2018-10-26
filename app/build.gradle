@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "app.project.android.com.recapcha"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+
+    compile 'com.google.android.gms:play-services-base:11.0.4'
+    compile 'com.google.android.gms:play-services-basement:11.0.4'
+    compile 'com.google.android.gms:play-services-safetynet:11.0.4'
+    compile 'com.google.android.gms:play-services-tasks:11.0.4'
+
+    // OkHttp : https://github.com/square/okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+
+    // Lottie Animation : https://github.com/airbnb/lottie-android
+    compile 'com.airbnb.android:lottie:2.1.0'
+
+    // Gson : https://github.com/google/gson
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    // Alerter : https://github.com/Tapadoo/Alerter
+    compile 'com.tapadoo.android:alerter:2.0.0'
+
+    // Rebound by Facebook for Animation : http://facebook.github.io/rebound/
+    compile 'com.facebook.rebound:rebound:0.3.8'
+
+}
